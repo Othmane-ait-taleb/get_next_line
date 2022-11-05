@@ -1,15 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
-/*                                                    +:+ +:+        
-	+:+     */
-/*   By: otait-ta <otait-ta@student.42.fr>          +#+  +:+      
-	+#+        */
-/*                                                +#+#+#+#+#+  
-	+#+           */
-/*   Created: 2022/11/03 20:13:44 by otait-ta          #+#    #+#             */
-/*   Updated: 2022/11/03 20:13:44 by otait-ta         ###   ########.fr       */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: otait-ta <otait-ta@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/04 13:52:58 by otait-ta          #+#    #+#             */
+/*   Updated: 2022/11/04 13:52:58 by otait-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +14,18 @@
 
 char	*get_next_line(int fd)
 {
-	static char	*str;
+	static char	*str[4096];
 	char		*line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 	{
 		return (0);
 	}
-	str = find_new_line(fd, str);
-	if (!str)
+	str[fd] = find_new_line(fd, str[fd]);
+	if (!str[fd])
 		return (NULL);
-	line = get_new_line(str);
-	str = find_rest(str);
+	line = get_new_line(str[fd]);
+	str[fd] = find_rest(str[fd]);
 	return (line);
 }
 
