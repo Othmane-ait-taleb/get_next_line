@@ -58,7 +58,7 @@ char	*get_new_line(char *old)
 	char	*line;
 
 	i = 0;
-	if (!old[i])
+	if (!*old)
 		return (NULL);
 	while (old[i] && old[i] != '\n')
 		i++;

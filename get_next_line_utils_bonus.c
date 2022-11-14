@@ -6,11 +6,11 @@
 /*   By: otait-ta <otait-ta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 13:06:25 by otait-ta          #+#    #+#             */
-/*   Updated: 2022/11/04 14:06:02 by otait-ta         ###   ########.fr       */
+/*   Updated: 2022/11/13 11:01:14 by otait-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*ft_strchr(const char *s, int c)
 {

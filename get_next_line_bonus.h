@@ -6,7 +6,7 @@
 /*   By: otait-ta <otait-ta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 13:58:18 by otait-ta          #+#    #+#             */
-/*   Updated: 2022/11/04 14:06:02 by otait-ta         ###   ########.fr       */
+/*   Updated: 2022/11/13 10:57:51 by otait-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <limits.h>
 
 char	*get_next_line(int fd);
 char	*ft_strchr(const char *s, int c);
